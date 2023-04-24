@@ -9,19 +9,24 @@ int main(void)
 {
 	int x;
 	int y;
+	int z;
 
-	for (x = 48; x <= 56; x++)
+	for (x = 48; x < 58; x++)
 	{
-		for (y = 49; y <= 57; y++)
+		for (y = 49; y < 58; y++)
 		{
-			if (y > x)
+			for (z = 50; z < 58; z++)
 			{
-				putchar(x);
-				putchar(y);
-				if (x != 56 || y != 57)
+				if (z > y && y > x)
 				{
-					putchar(',');
-					putchar(' ');
+					putchar(x);
+					putchar(y);
+					putchar(z);
+					if (x != 55 || y != 56)
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
 			}
 		}
