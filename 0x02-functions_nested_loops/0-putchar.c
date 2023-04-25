@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * main – Entry Point
- * Description: spelling out _putchar
+ * main – Prints _putchar
+ * Description: a program that displays _putchar
  * Return: 0
  */
 
@@ -18,4 +18,3 @@ int main(void)
 	_putchar('\n');
 	return (0);
 }
-
