@@ -1,24 +1,38 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * print_to_98 - prints numbers that starts from n to 98
- *
- * @n: start point of numbers
+ * times_table - prints the multiplication of 9 that starts with 0
+ * Return: N/A
  */
-void print_to_98(int n)
+void times_table(void)
 {
-	if (n >= 98)
+	int a, b, c, d, e;
+
+	for (a = 0; a <= 9; a++)
 	{
-		while (n > 98)
-			printf("%d, ", n--);
-		printf("%d\n", n);
-	}
-	else
+		for (b = 0; b <= 9; b++)
 	{
-		while (n < 98)
-			printf("%d, ", n++);
-		printf("%d\n", n);
+		c = a * b;
+		if (c > 9)
+		{
+			d = c % 10;
+			e = (c - d) / 10;
+			_putchar(44);
+			_putchar(32);
+			_putchar(e + '0');
+			_putchar(d + '0');
+		}
+		else
+		{
+		if (b != 0)
+		{
+			_putchar(44);
+			_putchar(32);
+			_putchar(32);
+		}
+		_putchar(c + '0');
+		}
 	}
-	printf("\n");
+		_putchar('\n');
+	}
 }
