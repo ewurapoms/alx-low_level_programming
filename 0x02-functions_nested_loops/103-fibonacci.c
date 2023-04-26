@@ -7,7 +7,7 @@
 int main(void)
 {
 	int p = 0;
-	unsigned long int q, r, s = r;
+	long int q, r, s = r;
 
 	while (r + q < 4000000)
 	{
@@ -17,6 +17,6 @@ int main(void)
 		q = r - q;
 		p++;
 	}
-	printf("%lu\n", s);
+	printf("%ld\n", s);
 	return (0);
 }
