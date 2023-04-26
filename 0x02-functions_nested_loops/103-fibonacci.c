@@ -7,7 +7,9 @@
 int main(void)
 {
 	int p = 0;
-	long int q, r, s = r;
+	long int q = 1;
+	long int r = 2;
+	long int s = r;
 
 	while (r + q < 4000000)
 	{
