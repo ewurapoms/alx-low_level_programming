@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_times_table - prints the times table, starting with 0
+ * print_times_table - Prints times table of given input
  * @n: represents times table value
  */
 void print_times_table(int n)
@@ -30,10 +30,10 @@ void print_times_table(int n)
 		else if (z <= 99 && z >= 10)
 		{
 			_putchar((z / 10) + '0');
-			_putchar((z % 10) + '0');
+		}
+		_putchar((z % 10) + '0');
 		}
 		_putchar('\n');
 		}
 		}
-	}
 }
