@@ -2,16 +2,17 @@
 
 /**
  * _isupper - checks for uppercase letters
- * @u: the value to check for
+ * @c: the value to check for
  * Return: 1 for upper, else 0
  */
 
-int_isupper(int u)
+int _isupper(int c)
 {
-	if (u >= 65 && u <= 90)
-	/* read 'u' values as ascii char A and Z */
+	if (c >= 65 && c <= 90)
+	/* read 'c' values as ascii char A and Z */
 	{
 		return (1);
 	}
+	else
 		return (0);
 }
