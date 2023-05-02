@@ -12,10 +12,10 @@ void print_array(int *a, int n)
 	for (pa = 0; pa < n; pa++)
 	{
 		printf("%d", a[pa]);
-	{
-	if (pa < n - 1)
-	printf(",");
-	}
+		if (pa != (n - 1))
+		{
+			printf(",");
+		}
 	}
 	printf("\n");
 }
