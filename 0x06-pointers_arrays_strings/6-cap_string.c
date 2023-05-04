@@ -15,7 +15,7 @@ char *cap_string(char *caps)
 	{
 		while (!(caps[p] >= 97 && caps[p] <= 122))
 			++p;
-		if (caps[p = 0] == ' ' ||
+		if (caps[p - 1] == 32 ||
 		caps[p - 1] == 9 ||
 		caps[p - 1] == 10 ||
 		caps[p - 1] == 44 ||
