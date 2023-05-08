@@ -1,34 +1,25 @@
 #include "main.h"
-#include <stdio.h>
-#include <string.h>
 
 /**
  * _strstr - entry point
  * @haystack: pointer to a char
  * @needle: char pointer
- * Return: NULL
+ * Return: 0
  */
 char *_strstr(char *haystack, char *needle)
-
 {
-	int y;
-	char *a = haystack;
-	char *b = needle;
-
-	if (*b == 0)
-		return (haystack);
-	while (*a)
+	for (; *haystack != '\0'; haystack ++)
 	{
-		y = 0;
-		if (*(haystack + y) == needle[y])
+		char *a = haystack;
+		char *b = needle;
+
+		while (*a == *b && *b != '\0')
 		{
-			do {
-				if (needle[1 + y] == '\0')
-					return (haystack);
-				++y;
-			} while (*(haystack + y) == *(needle + y));
+			a++;
+			b++;
 		}
-		haystack++;
+	if (*b == '\0')
+		return (haystack);
 	}
-	return (NULL);
+	return (0);
 }
