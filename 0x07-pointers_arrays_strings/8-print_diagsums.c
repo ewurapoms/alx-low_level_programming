@@ -1,12 +1,25 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * set_string - sets pointer to the char
- * @s: is a double pointer
- * @to: pointer to char
+ * print_diagsums - Entry point
+ * @a: pointer to an int
+ * @size: size of an int
+ * Return: 0
  */
-
-void set_string(char **s, char *to)
+void print_diagsums(int *a, int size)
 {
-	*s = to;
+	int q;
+	int r = 0;
+	int s = 0;
+
+	for (q = 0; q < size; q++)
+	{
+		r = r + a[q * size + q];
+	}
+	for (q = size - 1; q >= 0; --q)
+	{
+		s += a[q * size + (size - 1 - q)];
+	}
+	printf("%d, %d\n", r, s);
 }
