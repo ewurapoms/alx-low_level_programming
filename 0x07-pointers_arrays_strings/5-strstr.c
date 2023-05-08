@@ -19,15 +19,15 @@ char *_strstr(char *haystack, char *needle)
 	while (*a)
 	{
 		y = 0;
-	if (*(haystack + y) == needle[y])
-	{
-		do {
-			if (needle[1 + y] == '\0')
-				return (haystack);
-			++y;
-		} while (*(haystack + y) == *(needle + y));
-	}
-	haystack++;
+		if (*(haystack + y) == needle[y])
+		{
+			do {
+				if (needle[1 + y] == '\0')
+					return (haystack);
+				++y;
+			} while (*(haystack + y) == *(needle + y));
+		}
+		haystack++;
 	}
 	return (NULL);
 }
