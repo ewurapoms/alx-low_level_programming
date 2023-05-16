@@ -11,7 +11,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int a = 0,  b = 0; 
+	unsigned int a = 0, b = 0;
 	unsigned int c = 0, d = 0;
 	char *new;
 
@@ -19,7 +19,7 @@ char *str_concat(char *s1, char *s2)
 		c++;
 	while (s2 && s2[d])
 		d++;
-	new = malloc(sizeof(char)* (1 + c + d));
+	new = malloc(sizeof(char) * (1 + c + d));
 	if (new == NULL)
 		return (NULL);
 	a = 0;
