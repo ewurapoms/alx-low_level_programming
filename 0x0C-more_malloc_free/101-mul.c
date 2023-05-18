@@ -1,36 +1,35 @@
 #include "main.h"
-#include <stdlib.h>
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
- * main - program that multiplies two positive numbers
- * @argc: is the argument count
- * @argv: is the argument vector
+ * main - multiplies two positive numbers
+ * @argc: argument count
+ * @argv: is a pointer
  * Return: output
  */
+
 int main(int argc, char *argv[])
 {
-	unsigned long product;
-	int y = 1;
-	int z;
+	unsigned long prod;
+	int y = 1, z = 0;
 
 	if (argc != 3)
-	{ printf("Error\n");
-		exit(98); }
-
+	{
+		printf("Error\n");
+		exit(98);
+	}
 	for (y = 1; y < argc; y++)
 	{
 		for (z = 0; argv[y][z] != '\0'; z++)
 		{
-			if (argv[y][z] > '9' || argv[y][z] < '0')
-				/** assume ascii values for int used here**/
-			{ printf("Error\n");
-				exit(98); }
+			if (argv[y][z] < '0' || argv[y][z] > '9')
+			{
+				printf("Error\n");
+				exit(98);
+			}
 		}
 	}
-	product = atol(argv[1]) * atol(argv[2]);
-
-	printf("%lu\n", product);
-
+	prod = atol(argv[1]) * atol(argv[2]);
+	printf("%lu\n", prod);
 	return (0);
 }
