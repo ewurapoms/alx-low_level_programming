@@ -1,5 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
+
 /**
  * string_nconcat -  function that concatenates two strings.
  * @s1: pointer value
@@ -7,6 +9,7 @@
  * @n: input
  * Return: N/A
  */
+
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int f = 0;
