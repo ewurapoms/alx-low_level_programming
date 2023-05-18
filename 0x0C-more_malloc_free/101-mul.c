@@ -59,13 +59,10 @@ int main(int argc, char *argv[])
 	char *str, *string;
 	int a, b, c, z, d, m, n, *sum, q = 0;
 
-	str = argv[1];
-	string = argv[2];
+	str = argv[1], string = argv[2];
 	if (argc != 3 || !is_digit(str) || !is_digit(string))
 		print_error();
-	a = _strlen(str);
-	b = _strlen(string);
-	c = a + b + 1;
+	a = _strlen(str), b = _strlen(string), c = a + b + 1;
 	sum = malloc(sizeof(int) * c);
 	if (!sum)
 		return (1);
