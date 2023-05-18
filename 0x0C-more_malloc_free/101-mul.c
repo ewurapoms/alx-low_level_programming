@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	{
 		for (z = 0; argv[y][z] != '\0'; z++)
 		{
-			if (argv[y][z] > '9' || argv[y][z] < '0')
+			if (argv[y][z] > '9' || argv[y][z] < '0')/** assume ascii values for int used here **/
 			{
 				printf("Error\n");
 				exit(98);
@@ -32,6 +32,8 @@ int main(int argc, char *argv[])
 		}
 	}
 	product = atol(argv[1]) * atol(argv[2]);
+	
 	printf("%lu\n", product);
+	
 	return (0);
 }
