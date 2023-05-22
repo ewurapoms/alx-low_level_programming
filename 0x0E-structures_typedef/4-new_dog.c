@@ -12,7 +12,7 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	unsigned int d, o, g = 0;
+	unsigned int d, o, g;
 	dog_t *woof;
 
 
@@ -32,7 +32,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	for (g = 0; g < d; g++)
 		woof->name[g] = *(name + g);
-	woof->age = age;
+	(*woof).age = age;
 	for (o = 0; owner[o]; o++)
 		;
 	o++;
@@ -43,10 +43,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(woof);
 		return (NULL);
 	}
-	while (g < o)
-		++g;
-	{
+	for (g = 0; g < o; g++)
 		woof->owner[g] = owner[g];
-	}
 	return (woof);
 }
