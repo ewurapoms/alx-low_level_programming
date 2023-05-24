@@ -12,7 +12,9 @@
 
 int main(int argc, char *argv[])
 {
-	int (*fun_ptr)(int, int);
+	int x;
+	int y;
+	char *cop;
 
 	if (argc != 4)
 	{
@@ -20,14 +22,21 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	fun_ptr = get_op_func(argv[2]);
+	x = atoi(argv[1]);
+	cop = argv[2];
+	y = atoi(argv[3]);
 
-	if (!fun_ptr)
+	if (get_op_func(cop) == NULL || op[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
-
-	printf("%d\n", fun_ptr(atoi(argv[1]), atoi(argv[3])));
+	if ((*cop == 47 && y == 0) ||
+	    (*cop == 37 && y == 0))
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	printf("%d\n", get_op_func(op)(x, y));
 	return (0);
 }
