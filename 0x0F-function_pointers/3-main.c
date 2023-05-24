@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	cop = argv[2];
 	y = atoi(argv[3]);
 
-	if (get_op_func(cop) == NULL || op[1] != '\0')
+	if (get_op_func(cop) == NULL || cop[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
@@ -37,6 +37,6 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
-	printf("%d\n", get_op_func(op)(x, y));
+	printf("%d\n", get_op_func(cop)(x, y));
 	return (0);
 }
