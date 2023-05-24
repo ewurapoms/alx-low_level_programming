@@ -31,4 +31,3 @@ int main(int argc, char *argv[])
 	printf("%d\n", fun_ptr(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }
-
