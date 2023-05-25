@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * print_strings – Entry point
+ * print_strings - Entry point
  * @separator: the string to be printed between the strings
  * @n: is the number of strings passed to the function
  */
@@ -14,7 +14,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_list args;
 	char *str;
 
-	if (n > 0)
+	if (n >= 1)
 	{
 		va_start(args, n);
 		while (c < n)
