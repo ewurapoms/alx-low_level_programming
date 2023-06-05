@@ -1,5 +1,8 @@
-#ifndef _ _
-#define _ _
+#ifndef _LISTS_
+#define _LISTS_
+
+#include <stdio.h>
+#include <stddef.h>
 
 /**
  * struct listint_s - singly linked list
@@ -7,12 +10,11 @@
  * @next: points to the next node
  *
  * Description: singly linked list node structure
- * 
  */
 typedef struct listint_s
 {
-    int n;
-    struct listint_s *next;
+	int n;
+	struct listint_s *next;
 } listint_t;
 
 
