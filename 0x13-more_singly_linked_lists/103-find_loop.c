@@ -2,7 +2,7 @@
 
 /**
  * find_listint_loop - finds the loop in a linked list.
- * @head: is a pointer
+ * @head: is a pointer.
  *
  * Return: address of node start or NULL if no node
  */
