@@ -18,7 +18,7 @@ size_t print_listint_safe(const listint_t *head)
 	{
 		printf("[%p] %d\n", (void *)head, head->n);
 		show++;
-		if (head->next < head)
+		if (head > head->next)
 		{
 			head = head->next;
 		}
