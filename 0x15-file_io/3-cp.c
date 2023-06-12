@@ -25,7 +25,6 @@ int main(int argc, char *argv[])
 	checks_IO(src, -1, argv[1], 'O');
 	dest = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, mode);
 	checks_IO(dest, -1, argv[2], 'W');
-
 	while (buffs == 1024)
 	{
 		buffs = read(src, buffer, sizeof(buffer));
